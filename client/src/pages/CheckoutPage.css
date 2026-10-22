@@ -1,0 +1,429 @@
+.co-header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.co-header .shop-inner {
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.co-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.co-back {
+  justify-self: start;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* 단계 표시 */
+.co-steps {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.co-steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.co-steps li + li::before {
+  content: '';
+  width: 56px;
+  height: 1px;
+  margin-right: 6px;
+  background: #cbd2dc;
+}
+
+.co-steps li span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e2e6ee;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.co-steps li.active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.co-steps li.active span {
+  background: #000;
+  color: #fff;
+}
+
+.co-steps li.done span {
+  background: #555;
+  color: #fff;
+}
+
+.co-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 0;
+  color: var(--muted);
+}
+
+.co-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.co-panel,
+.co-summary {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.co-panel h2,
+.co-summary h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* 폼 */
+.co-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.co-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.co-input {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+}
+
+.co-input:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.co-input.invalid {
+  border-color: #d93025;
+}
+
+.co-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* 우편번호 + 주소 검색 버튼 */
+.co-zip-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.co-zip-row .co-field {
+  margin-bottom: 20px;
+}
+
+.co-search {
+  height: 48px;
+  margin-top: 30px;
+  padding: 0 18px;
+}
+
+.co-input[readonly] {
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.co-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.co-primary:hover:not(:disabled) {
+  background: #222;
+}
+
+.co-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.co-actions {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.co-actions .shop-btn {
+  height: 52px;
+  justify-content: center;
+}
+
+.co-panel .message {
+  margin-bottom: 16px;
+}
+
+/* 확인 */
+.co-review {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.co-review div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.co-review dt {
+  color: var(--muted);
+}
+
+.co-review dd {
+  margin: 0;
+}
+
+/* 완료 */
+.co-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.co-done h2 {
+  margin: 20px 0 8px;
+}
+
+.co-done-mark {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  font-size: 32px;
+}
+
+.co-done-no {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.co-done-text {
+  margin: 16px 0 28px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.co-link {
+  max-width: 280px;
+}
+
+/* 주문 요약 */
+.co-summary {
+  position: sticky;
+  top: 24px;
+}
+
+.co-items {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.co-items li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.co-thumb {
+  position: relative;
+  width: 72px;
+  height: 90px;
+  border-radius: 8px;
+  background: #eef0f4;
+}
+
+.co-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.co-qty {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+.co-item-name {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.co-item-price {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.co-item-price span {
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.co-sums {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.co-sums div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.co-sums dt {
+  color: var(--muted);
+}
+
+.co-sums dd {
+  margin: 0;
+}
+
+.co-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-weight: 700;
+}
+
+.co-total strong {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .co-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .co-summary {
+    position: static;
+    order: -1;
+  }
+
+  .co-steps li + li::before {
+    width: 24px;
+  }
+}
+
+/* 쿠폰 선택 */
+.co-coupon {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.co-coupon label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.co-coupon-hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.co-discount dt,
+.co-discount dd {
+  color: #d93025;
+}

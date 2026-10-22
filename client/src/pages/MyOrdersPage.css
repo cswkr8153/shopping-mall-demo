@@ -1,0 +1,292 @@
+.mo-wrap {
+  max-width: 760px;
+}
+
+.mo-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 0;
+  color: var(--muted);
+}
+
+.mo-list {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mo-card {
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.mo-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mo-date {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mo-no {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.mo-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mo-badge.blue {
+  background: #dce6ff;
+  color: var(--blue);
+}
+
+.mo-badge.green {
+  background: #dcf3e3;
+  color: #2f8f4e;
+}
+
+.mo-badge.gray {
+  background: #e9ecf1;
+  color: #4b5563;
+}
+
+.mo-summary {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.mo-thumb {
+  width: 72px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eef0f4;
+}
+
+.mo-thumb.small {
+  width: 56px;
+  height: 70px;
+}
+
+.mo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mo-name {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mo-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.mo-total {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mo-toggle {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.mo-toggle:hover {
+  background: #f9fafb;
+}
+
+.mo-detail {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.mo-items {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mo-items li {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.mo-dl {
+  margin: 0 0 20px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.mo-dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mo-dl dt {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.mo-dl dd {
+  margin: 0;
+  text-align: right;
+}
+
+.mo-discount dt,
+.mo-discount dd {
+  color: #d93025;
+}
+
+.mo-sum {
+  font-weight: 800;
+}
+
+.mo-sum dt {
+  color: var(--ink) !important;
+}
+
+.mo-receipt {
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .mo-card {
+    padding: 16px;
+  }
+
+  .mo-summary {
+    grid-template-columns: 56px 1fr;
+  }
+
+  .mo-summary .mo-thumb {
+    width: 56px;
+    height: 70px;
+  }
+
+  .mo-total {
+    grid-column: 1 / -1;
+    text-align: right;
+  }
+}
+
+.mo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.mo-buttons .mo-receipt,
+.mo-buttons .mo-cancel {
+  flex: 1;
+  height: 44px;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.mo-cancel {
+  color: #d93025;
+}
+
+.mo-detail .message {
+  margin-bottom: 12px;
+}
+
+/* 상태별 탭 */
+.mo-tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 24px;
+  padding: 4px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #e9ecf1;
+}
+
+.mo-tabs button {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  color: #4b5563;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.mo-tabs button.active {
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.mo-tab-count {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: #d5dae4;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.mo-tabs button.active .mo-tab-count {
+  background: var(--blue);
+  color: #fff;
+}

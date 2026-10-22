@@ -1,0 +1,219 @@
+.pf-back {
+  font-size: 20px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.pf-new-btn,
+.pf-submit {
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pf-new-btn:hover,
+.pf-submit:hover:not(:disabled) {
+  background: #222;
+}
+
+.pf-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 탭 */
+.pf-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+  border-radius: 10px;
+  background: #e9ecf1;
+}
+
+.pf-tabs button {
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.pf-tabs button.active {
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.pf-panel {
+  margin-top: 24px;
+}
+
+.pf-panel > h2 {
+  margin-bottom: 24px;
+}
+
+/* 폼 */
+.pf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.pf-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.pf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.pf-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pf-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.pf-input:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.pf-input.invalid {
+  border-color: #d93025;
+}
+
+.pf-textarea {
+  height: 140px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.pf-hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.pf-upload {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.pf-upload-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pf-preview {
+  width: 160px;
+  aspect-ratio: 1 / 1.25;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.pf-preview-empty {
+  display: grid;
+  place-items: center;
+  background: #f4f6fa;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pf-preview-empty.invalid {
+  border-color: #d93025;
+}
+
+.shop-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pf-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.pf-panel .message {
+  margin-top: 16px;
+}
+
+/* 목록 */
+.pf-thumb {
+  width: 44px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #eef0f4;
+}
+
+.pf-list-price {
+  margin-left: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+@media (max-width: 760px) {
+  .pf-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pf-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.pf-row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.pf-edit {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+}

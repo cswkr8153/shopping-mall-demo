@@ -1,0 +1,24 @@
+# 의존성 / 빌드 결과
+node_modules/
+dist/
+dist-ssr/
+
+# 환경변수 (DB 비밀번호, JWT 키, 결제 API 키가 들어 있음). 예시 파일(.env.example)만 올림
+.env
+.env.*
+!.env.example
+
+# Vercel 로컬 설정
+.vercel/
+
+# 로그 / OS 파일
+*.log
+.DS_Store
+Thumbs.db
+
+# 프로젝트 폴더 바로 아래의 스크린샷
+# (화면에 회원 이메일, 암호화된 비밀번호, 주문자/배송지 정보가 보일 수 있어 올리지 않음)
+/*.png
+/*.PNG
+/*.jpg
+/*.jpeg

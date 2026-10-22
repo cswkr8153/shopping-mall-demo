@@ -1,0 +1,225 @@
+.pd-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.pd-back:hover {
+  color: var(--ink);
+}
+
+.pd-state {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.pd {
+  display: grid;
+  grid-template-columns: minmax(0, 480px) 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* 사진은 잘리지 않게 원본 비율 그대로 보여주고, 너무 커지지 않게 높이를 제한 */
+.pd-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #eef0f4;
+}
+
+.pd-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+}
+
+.pd-category {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--yellow);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pd-name {
+  margin: 14px 0 6px;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.pd-sku {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pd-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 24px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.pd-discount {
+  font-size: 22px;
+  font-weight: 800;
+  color: #d93025;
+}
+
+.pd-price {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.pd-list-price {
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.pd-desc h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pd-desc p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+  white-space: pre-wrap;
+}
+
+.pd-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.pd-notice {
+  margin-top: 24px;
+}
+
+.pd-add,
+.pd-buy {
+  height: 52px;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pd-add {
+  border: 1px solid var(--blue);
+  background: #fff;
+  color: var(--blue);
+}
+
+.pd-add:hover {
+  background: #eef2ff;
+}
+
+.pd-buy {
+  border: none;
+  background: var(--blue);
+  color: #fff;
+}
+
+.pd-buy:hover {
+  background: var(--blue-dark);
+}
+
+@media (max-width: 760px) {
+  .pd {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.pd-quantity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.pd-quantity-label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pd-quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.pd-quantity button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.pd-quantity button:disabled {
+  color: #c0c5cf;
+  cursor: not-allowed;
+}
+
+.pd-quantity input {
+  width: 56px;
+  height: 40px;
+  border: none;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  text-align: center;
+  font: inherit;
+  font-size: 15px;
+  -moz-appearance: textfield;
+}
+
+.pd-quantity input::-webkit-outer-spin-button,
+.pd-quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pd-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.pd-total strong {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.pd-buttons {
+  margin-top: 20px;
+}
