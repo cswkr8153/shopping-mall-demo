@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ProductCard from '../components/ProductCard'
+import VideoPopup from '../components/VideoPopup'
 import { isLoggedIn, useCart } from '../context/CartContext'
 import { CATEGORIES } from '../constants/categories'
 import { discountRate, formatPrice } from '../utils/product'
@@ -447,6 +448,7 @@ function MainPage() {
   return (
     <div className="shop home">
       <Navbar />
+      {!isList && <VideoPopup />}
       <main className="home-main">
         {isList ? (
           // 검색/필터 조건이 바뀌면 목록 상태(정렬, 더보기)를 새로 시작
