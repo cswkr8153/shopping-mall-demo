@@ -107,6 +107,11 @@ function SignupPage() {
         <h1>회원가입</h1>
         <p className="subtitle">계정을 만들고 쇼핑을 시작하세요</p>
 
+        <p className="perk">
+          <strong>가입하면 첫 주문 배송비 무료!</strong>
+          <span>배송비 무료 쿠폰 1장을 가입 즉시 드려요 (1회 사용)</span>
+        </p>
+
         <div className="field">
           <label htmlFor="email">이메일</label>
           <div className={`input-wrap ${errors.email ? 'invalid' : ''}`}>

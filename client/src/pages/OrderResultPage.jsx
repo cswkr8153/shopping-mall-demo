@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import api from '../api/client'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { useCart } from '../context/CartContext'
 import './MainPage.css'
 import './OrderResultPage.css'
@@ -69,6 +70,7 @@ function OrderResultPage() {
           {result.status === 'fail' && <Failure result={result} onRetry={() => navigate('/checkout', { state: result.retry })} />}
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

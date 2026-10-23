@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import api from '../api/client'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { isLoggedIn } from '../context/CartContext'
 import { ORDER_STATUS } from '../constants/orderStatus'
 import './MainPage.css'
@@ -230,6 +231,7 @@ function MyOrdersPage() {
           )}
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

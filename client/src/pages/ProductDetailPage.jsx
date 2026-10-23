@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import api from '../api/client'
 import { isLoggedIn, useCart } from '../context/CartContext'
 import './MainPage.css'
@@ -140,6 +141,7 @@ function ProductDetailPage() {
           )}
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

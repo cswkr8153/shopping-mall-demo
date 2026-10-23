@@ -1,0 +1,152 @@
+/* 상품 카드: 모서리를 깎은 어두운 패널. 마우스를 올리면 시안색 HUD 괄호와 테두리가 켜짐 */
+.pc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--edge);
+  background: linear-gradient(180deg, var(--panel) 0%, #0b1329 100%);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.pc:hover,
+.pc:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+  background: linear-gradient(180deg, var(--panel-hi) 0%, #0d1634 100%);
+}
+
+.pc-thumb {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #080e20;
+}
+
+.pc-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pc:hover .pc-thumb img,
+.pc:focus-visible .pc-thumb img {
+  transform: scale(1.06);
+}
+
+/* HUD 괄호 (마우스를 올릴 때만 보임) */
+.pc-thumb::before,
+.pc-thumb::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.pc-thumb::before {
+  left: 10px;
+  border-top: 2px solid var(--cyan);
+  border-left: 2px solid var(--cyan);
+}
+
+.pc-thumb::after {
+  right: 22px;
+  border-top: 2px solid var(--cyan);
+  border-right: 2px solid var(--cyan);
+}
+
+.pc:hover .pc-thumb::before,
+.pc:hover .pc-thumb::after,
+.pc:focus-visible .pc-thumb::before,
+.pc:focus-visible .pc-thumb::after {
+  opacity: 1;
+}
+
+.pc-cart {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(56, 217, 255, 0.55);
+  background: rgba(6, 10, 22, 0.88);
+  color: var(--cyan);
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition: background 0.15s, color 0.15s;
+}
+
+.pc-cart:hover {
+  border-color: var(--g-yellow);
+  background: var(--g-yellow);
+  color: #0a1124;
+}
+
+.pc-info {
+  padding: 13px 14px 16px;
+}
+
+.pc-cat {
+  margin: 0 0 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--cyan);
+}
+
+.pc-name {
+  display: -webkit-box;
+  min-height: 2.8em;
+  margin: 0 0 10px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-hi);
+  word-break: keep-all; /* 한글 단어 중간에서 줄이 바뀌지 않게 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.pc-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.pc-price strong {
+  font-size: 19px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.pc-rate {
+  padding: 2px 9px 2px 7px;
+  background: var(--g-red);
+  font-family: var(--font-hud);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+}
+
+.pc-list {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-lo);
+  text-decoration: line-through;
+}

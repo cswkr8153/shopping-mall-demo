@@ -1,0 +1,313 @@
+/* ===== 헤더: 건담 격납고 톤 (어두운 우주색 + 트리컬러 라인) ===== */
+
+/* 상단 안내바 */
+.nb-top {
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, var(--g-blue) 0 34%, var(--g-red) 34% 67%, var(--g-yellow) 67% 100%) 1;
+  background: #04070f;
+  font-size: 12px;
+  color: var(--text-lo);
+}
+
+.nb-top .shop-inner {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nb-promo::before {
+  content: '▶';
+  margin-right: 8px;
+  font-size: 9px;
+  color: var(--g-yellow);
+}
+
+.nb-top-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+/* 회원가입 혜택 안내 (비회원에게만 보임) */
+.nb-promo-join {
+  color: var(--text-mid) !important;
+  text-decoration: none;
+}
+
+.nb-promo-join b {
+  color: var(--g-yellow);
+}
+
+.nb-promo-join:hover {
+  color: #fff !important;
+}
+
+.nb-top a,
+.nb-top button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nb-top a:hover,
+.nb-top button:hover {
+  color: var(--cyan);
+}
+
+.nb-welcome {
+  font-weight: 700;
+  color: var(--text-hi);
+}
+
+.nb-login {
+  font-weight: 700;
+  color: var(--g-yellow) !important;
+}
+
+/* 로고 / 검색 / 아이콘 + 카테고리 메뉴 (스크롤해도 위에 고정) */
+.nb-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, #0b1330 0%, #070c1c 100%);
+  border-bottom: 1px solid var(--edge);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.nb-main {
+  padding: 14px 0;
+}
+
+.nb-main-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 36px;
+}
+
+.nb-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-hi);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nb-logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+}
+
+.nb-logo-text small {
+  margin-top: 3px;
+  font-family: var(--font-hud);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--cyan);
+}
+
+/* 검색창: 시안색 테두리가 빛나는 HUD 입력창 */
+.nb-search {
+  display: flex;
+  width: 100%;
+  max-width: 640px;
+  height: 46px;
+  justify-self: center;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: #0a1330;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.nb-search:focus-within {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 1px var(--cyan), 0 0 18px rgba(56, 217, 255, 0.35);
+}
+
+.nb-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-hi);
+  font: inherit;
+  font-size: 15px;
+}
+
+.nb-search input::placeholder {
+  color: var(--text-lo);
+}
+
+.nb-search button {
+  width: 58px;
+  display: grid;
+  place-items: center;
+  border: none;
+  background: linear-gradient(135deg, var(--g-blue), #1d3fd0);
+  color: #fff;
+  cursor: pointer;
+}
+
+.nb-search button:hover {
+  background: linear-gradient(135deg, var(--cyan), var(--g-blue));
+}
+
+.nb-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.nb-icon {
+  position: relative;
+  min-width: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--text-mid);
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nb-icon:hover {
+  background: rgba(56, 217, 255, 0.1);
+  color: var(--cyan);
+}
+
+.nb-badge {
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--g-red);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 18px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 45, 74, 0.6);
+}
+
+/* 카테고리 메뉴 */
+.nb-cats {
+  border-top: 1px solid #17234a;
+  background: rgba(4, 7, 15, 0.55);
+}
+
+.nb-cats .shop-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  height: 46px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nb-cats .shop-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.nb-cat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-mid);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nb-cat::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+  height: 3px;
+  background: var(--g-yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.nb-cat:hover {
+  color: #fff;
+}
+
+.nb-cat:hover::after,
+.nb-cat.active::after {
+  transform: scaleX(1);
+}
+
+.nb-cat.active {
+  color: var(--g-yellow);
+}
+
+.nb-cat.hot {
+  color: var(--g-red);
+}
+
+.nb-cat.hot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--g-red);
+  box-shadow: 0 0 8px var(--g-red);
+}
+
+@media (max-width: 860px) {
+  .nb-main-inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'logo icons'
+      'search search';
+    gap: 12px;
+  }
+
+  .nb-logo {
+    grid-area: logo;
+  }
+
+  .nb-icons {
+    grid-area: icons;
+  }
+
+  .nb-search {
+    grid-area: search;
+    max-width: none;
+  }
+
+  /* 모바일: 일반 안내는 숨기고, 회원가입 혜택 안내는 계속 보여줌 */
+  .nb-promo:not(.nb-promo-join) {
+    display: none;
+  }
+
+  .nb-promo-join {
+    font-size: 11px;
+  }
+}

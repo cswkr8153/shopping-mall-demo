@@ -41,6 +41,14 @@ exports.getPayment = async (impUid) => {
   return json.response;
 };
 
+// 주문번호(merchant_uid)로 "결제 완료"된 결제의 결제 번호(imp_uid)를 찾음. 없으면 null
+// 주의: 이 조회는 테스트(샌드박스) 결제도 플래그 없이 찾아주므로, 찾은 imp_uid는 반드시 getPayment로 다시 검증해서 써야 함
+exports.findPaidImpUid = async (merchantUid) => {
+  const token = await getAccessToken();
+  const { json } = await call(`/payments/find/${encodeURIComponent(merchantUid)}/paid`, { token });
+  return json.code === 0 && json.response?.imp_uid ? json.response.imp_uid : null;
+};
+
 // 결제 전체 취소(환불). 성공하면 취소된 결제 정보를 반환
 exports.cancelPayment = async (impUid, reason) => {
   const token = await getAccessToken();

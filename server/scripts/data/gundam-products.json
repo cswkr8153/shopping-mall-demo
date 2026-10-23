@@ -1,0 +1,179 @@
+[
+  {
+    "sku": "GDM-001",
+    "name": "MG 1/100 RX-78-2 건담 Ver.3.0",
+    "price": 62000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755641/figurebox/photo-01.png",
+    "description": "기동전사 건담의 주역 기체 RX-78-2 입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 69000
+  },
+  {
+    "sku": "GDM-002",
+    "name": "MG 1/100 유니콘 건담 Ver.Ka",
+    "price": 99000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755642/figurebox/photo-02.png",
+    "description": "기동전사 건담 UC의 유니콘 건담입니다. 유니콘 모드와 데스트로이 모드의 변형을 재현할 수 있습니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 118000
+  },
+  {
+    "sku": "GDM-003",
+    "name": "MG 1/100 사자비 Ver.Ka",
+    "price": 89000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755652/figurebox/photo-17.png",
+    "description": "샤아 아즈나블의 전용 모빌슈트 사자비입니다. 붉은 색상과 웅장한 실루엣이 특징입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 105000
+  },
+  {
+    "sku": "GDM-004",
+    "name": "MG 1/100 프리덤 건담 Ver.2.0",
+    "price": 65000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755647/figurebox/photo-11.png",
+    "description": "기동전사 건담 SEED의 프리덤 건담입니다. 날개 전개 기믹으로 화려한 연출이 가능합니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 72000
+  },
+  {
+    "sku": "GDM-005",
+    "name": "MG 1/100 스트라이크 프리덤 건담",
+    "price": 79000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755651/figurebox/photo-16.png",
+    "description": "기동전사 건담 SEED DESTINY의 스트라이크 프리덤 건담입니다. 대형 윙 유닛이 돋보이는 기체입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 92000
+  },
+  {
+    "sku": "GDM-006",
+    "name": "MG 1/100 ν건담 Ver.Ka",
+    "price": 84000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755643/figurebox/photo-03.png",
+    "description": "기동전사 건담 역습의 샤아의 ν건담입니다. 핀 펀넬 등 풍부한 무장이 특징입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 96000
+  },
+  {
+    "sku": "GDM-007",
+    "name": "MG 1/100 윙 건담 제로 EW Ver.Ka",
+    "price": 78000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755650/figurebox/photo-15.png",
+    "description": "신기동전기 건담 W Endless Waltz의 윙 건담 제로입니다. 버드 모드로의 변형을 재현할 수 있습니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 90000
+  },
+  {
+    "sku": "GDM-008",
+    "name": "MG 1/100 더블제타 건담 Ver.Ka",
+    "price": 98000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755643/figurebox/photo-04.png",
+    "description": "기동전사 건담 ZZ의 더블제타 건담입니다. 합체와 분리 기믹을 즐길 수 있습니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 115000
+  },
+  {
+    "sku": "GDM-009",
+    "name": "MG 1/100 건담 엑시아",
+    "price": 54000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755647/figurebox/photo-10.png",
+    "description": "기동전사 건담 00의 건담 엑시아입니다. 날렵한 디자인과 GN 소드가 인상적입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 60000
+  },
+  {
+    "sku": "GDM-010",
+    "name": "MG 1/100 신주 Ver.Ka",
+    "price": 95000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755644/figurebox/photo-06.png",
+    "description": "기동전사 건담 UC의 신주입니다. 금색 프레임과 붉은 장갑의 대비가 화려한 기체입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 110000
+  },
+  {
+    "sku": "GDM-011",
+    "name": "MG 1/100 샤아 전용 자쿠 II Ver.2.0",
+    "price": 58000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755644/figurebox/photo-05.png",
+    "description": "샤아 아즈나블이 탑승하는 붉은 자쿠 II입니다. 모노아이 가동 기믹이 있습니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 64000
+  },
+  {
+    "sku": "GDM-012",
+    "name": "MG 1/100 자쿠 II Ver.2.0",
+    "price": 56000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755649/figurebox/photo-14.png",
+    "description": "지온군의 양산형 모빌슈트 자쿠 II입니다. 모노아이 가동 기믹이 있습니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다."
+  },
+  {
+    "sku": "GDM-013",
+    "name": "MG 1/100 건담 에피온 EW",
+    "price": 72000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755649/figurebox/photo-13.png",
+    "description": "신기동전기 건담 W Endless Waltz의 건담 에피온입니다. 에너지 소드와 쉴드가 특징입니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 80000
+  },
+  {
+    "sku": "GDM-014",
+    "name": "MG 1/100 건담 데스티니",
+    "price": 69000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755646/figurebox/photo-08.png",
+    "description": "기동전사 건담 SEED DESTINY의 데스티니 건담입니다. 광익 전개 기믹으로 역동적인 연출이 가능합니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다.",
+    "listPrice": 76000
+  },
+  {
+    "sku": "GDM-015",
+    "name": "MG 1/100 저스티스 건담",
+    "price": 62000,
+    "category": "조립제품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755645/figurebox/photo-07.png",
+    "description": "기동전사 건담 SEED의 저스티스 건담입니다. 파이트 유닛과의 결합 기믹이 있습니다. 1/100 스케일 MG(마스터 그레이드) 시리즈 조립식 모형입니다. 접착제와 도색 없이 조립할 수 있는 스냅핏 방식이고, 내부 프레임이 있어 관절이 넓게 움직여 다양한 포즈를 연출할 수 있습니다."
+  },
+  {
+    "sku": "GDM-016",
+    "name": "MG 1/100 RX-78-2 건담 Ver.3.0 [완성품]",
+    "price": 89000,
+    "category": "완성품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755648/figurebox/photo-12.png",
+    "description": "RX-78-2 건담 Ver.3.0 을 조립 완료한 상품입니다. 조립과 마감이 끝난 완성품이라 박스에서 꺼내 바로 전시할 수 있습니다. 조립할 시간이 부족하거나 선물용으로 찾는 분께 적합합니다.",
+    "listPrice": 99000
+  },
+  {
+    "sku": "GDM-017",
+    "name": "MG 1/100 샤아 전용 자쿠 II Ver.2.0 [완성품]",
+    "price": 92000,
+    "category": "완성품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755653/figurebox/photo-19.png",
+    "description": "샤아 전용 자쿠 II Ver.2.0 을 조립 완료한 상품입니다. 조립과 마감이 끝난 완성품이라 박스에서 꺼내 바로 전시할 수 있습니다. 조립할 시간이 부족하거나 선물용으로 찾는 분께 적합합니다.",
+    "listPrice": 105000
+  },
+  {
+    "sku": "GDM-018",
+    "name": "MG 1/100 프리덤 건담 Ver.2.0 [완성품]",
+    "price": 99000,
+    "category": "완성품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755652/figurebox/photo-18.png",
+    "description": "프리덤 건담 Ver.2.0 을 조립 완료한 상품입니다. 조립과 마감이 끝난 완성품이라 박스에서 꺼내 바로 전시할 수 있습니다. 조립할 시간이 부족하거나 선물용으로 찾는 분께 적합합니다.",
+    "listPrice": 119000
+  },
+  {
+    "sku": "GDM-019",
+    "name": "MG 1/100 스트라이크 건담 [완성품]",
+    "price": 79000,
+    "category": "완성품",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755646/figurebox/photo-09.png",
+    "description": "스트라이크 건담을 조립 완료한 상품입니다. 조립과 마감이 끝난 완성품이라 박스에서 꺼내 바로 전시할 수 있습니다. 조립할 시간이 부족하거나 선물용으로 찾는 분께 적합합니다."
+  },
+  {
+    "sku": "GDM-020",
+    "name": "MG 1/100 전용 건담 디스플레이 케이스",
+    "price": 59000,
+    "category": "기타",
+    "image": "https://res.cloudinary.com/rgvn7zbw/image/upload/c_pad,b_auto,w_600,h_750,q_auto,f_auto/v1792755654/figurebox/photo-20.png",
+    "description": "1/100 스케일 MG 건담을 먼지로부터 보호하면서 전시할 수 있는 투명 디스플레이 케이스입니다. 검은색 받침대가 함께 구성되어 있습니다.",
+    "listPrice": 69000
+  }
+]

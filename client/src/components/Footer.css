@@ -1,0 +1,83 @@
+.ft {
+  margin-top: 40px;
+  padding: 44px 0 32px;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, var(--g-blue) 0 34%, var(--g-red) 34% 67%, var(--g-yellow) 67% 100%) 1;
+  background: linear-gradient(180deg, #080d1f 0%, #04070f 100%);
+  color: var(--text-lo);
+  font-size: 13px;
+}
+
+.ft-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #17234a;
+}
+
+.ft h4 {
+  margin: 0 0 14px;
+  font-family: var(--font-hud);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--cyan);
+}
+
+.ft ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ft a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ft a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ft-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text-hi);
+}
+
+.ft-desc {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.ft-note {
+  margin: 24px 0 8px;
+  line-height: 1.7;
+}
+
+.ft-copy {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #56648a;
+}
+
+@media (max-width: 760px) {
+  .ft-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ft-brand {
+    grid-column: 1 / -1;
+  }
+}

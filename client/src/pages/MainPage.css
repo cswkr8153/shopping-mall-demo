@@ -1,11 +1,28 @@
+/* 쇼핑몰 공통 기본 스타일: 색상 변수, 레이아웃, 버튼, 필터 칩, 알림. (헤더는 components/Navbar.css, 상품 카드는 components/ProductCard.css) */
 .shop {
   --blue: #2447d0;
   --blue-dark: #1b38a8;
   --yellow: #ffd426;
+  --red: #e60023;
   --ink: #111827;
   --muted: #6b7280;
   --line: #e5e7eb;
   --bg: #f4f6fa;
+
+  /* 건담 테마(헤더, 푸터, 메인 페이지): 우주색 배경 + RX-78-2 트리컬러 + 건담 눈의 시안색 */
+  --space-0: #060a14;
+  --space-1: #0a1124;
+  --panel: #0f1932;
+  --panel-hi: #16234a;
+  --edge: #25346a;
+  --text-hi: #eef2ff;
+  --text-mid: #b4c0e0;
+  --text-lo: #7f8fb8;
+  --cyan: #38d9ff;
+  --g-blue: #2f5bff;
+  --g-red: #ff2d4a;
+  --g-yellow: #ffd426;
+  --font-hud: 'Orbitron', 'Segoe UI', sans-serif;
 
   min-height: 100vh;
   background: var(--bg);
@@ -16,83 +33,6 @@
   max-width: 1216px;
   margin: 0 auto;
   padding: 0 24px;
-}
-
-/* 상단 안내 배너 */
-.shop-notice {
-  background: var(--blue);
-  color: #fff;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 30px;
-}
-
-/* 헤더 */
-.shop-header {
-  background: #f8f9fc;
-  border-bottom: 1px solid var(--line);
-}
-
-.shop-header .shop-inner {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.shop-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 22px;
-  font-weight: 900;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.shop-logo-mark {
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
-  background: var(--yellow);
-  font-size: 18px;
-  font-weight: 900;
-}
-
-.shop-nav {
-  display: flex;
-  gap: 28px;
-}
-
-.shop-nav button {
-  border: none;
-  background: none;
-  padding: 6px 0;
-  font: inherit;
-  font-size: 14px;
-  color: #374151;
-  cursor: pointer;
-}
-
-.shop-nav button:hover,
-.shop-nav button.active {
-  color: var(--blue);
-  font-weight: 700;
-}
-
-.shop-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.shop-user {
-  font-size: 13px;
-  color: #374151;
 }
 
 .shop-btn {
@@ -116,29 +56,10 @@
   background: #f9fafb;
 }
 
-.shop-cart-count {
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
-  border-radius: 10px;
-  background: var(--blue);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 20px;
-  text-align: center;
-}
-
 /* 본문 */
 .shop-main {
+  min-height: 60vh;
   padding: 32px 0 64px;
-}
-
-.shop-title-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
 }
 
 .shop-title {
@@ -153,33 +74,7 @@
   color: var(--muted);
 }
 
-.shop-sort {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.shop-sort select {
-  height: 40px;
-  padding: 0 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  font: inherit;
-  font-size: 14px;
-  color: var(--ink);
-}
-
-/* 필터 */
-.shop-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 28px 0 32px;
-}
-
+/* 필터 칩 (어드민 화면에서도 사용) */
 .shop-chip {
   height: 40px;
   padding: 0 18px;
@@ -203,183 +98,9 @@
   font-weight: 700;
 }
 
-/* 상품 그리드 */
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.shop-card {
-  position: relative;
-  padding: 4px 4px 0;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.shop-thumb {
-  position: relative;
-  aspect-ratio: 1 / 1.25;
-  display: grid;
-  place-items: center;
-  border-radius: 9px;
-  overflow: hidden;
-}
-
-.shop-thumb-grade {
-  font-size: 64px;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.85);
-  letter-spacing: 2px;
-}
-
-.shop-thumb img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.shop-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--ink);
-}
-
-.shop-badge.preorder {
-  background: var(--yellow);
-}
-
-.shop-badge.soldout {
-  background: var(--ink);
-  color: #fff;
-}
-
-.shop-scale {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 3px 8px;
-  border-radius: 5px;
-  background: #fff;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.shop-info {
-  position: relative;
-  padding: 12px 10px 16px;
-}
-
-.shop-series {
-  margin: 0;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.shop-name {
-  margin: 4px 0 10px;
-  padding-right: 48px;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-.shop-price {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.shop-add {
-  position: absolute;
-  right: 6px;
-  top: 8px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 8px;
-  background: var(--blue);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-
-.shop-add:hover:not(:disabled) {
-  background: var(--blue-dark);
-}
-
-.shop-add:disabled {
-  background: #cbd2dc;
-  cursor: not-allowed;
-}
-
-.shop-empty {
-  grid-column: 1 / -1;
-  padding: 80px 0;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* 반응형 */
-@media (max-width: 1024px) {
-  .shop-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 760px) {
-  .shop-nav {
-    display: none;
-  }
-
-  .shop-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .shop-title-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .shop-thumb-grade {
-    font-size: 44px;
-  }
-}
-
-/* 로그인 등 폼 페이지: navbar 아래 영역에서 가운데 정렬 */
+/* 로그인 등 폼 페이지: 헤더 아래 영역에서 가운데 정렬 */
 .shop .page {
-  min-height: calc(100vh - 95px);
-}
-
-.shop-price-list {
-  margin-left: 8px;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--muted);
-  text-decoration: line-through;
-}
-
-.shop-thumb {
-  background: #eef0f4;
-}
-
-.shop-card {
-  cursor: pointer;
-}
-
-.shop-card:hover {
-  border-color: #aab4cf;
+  min-height: 60vh;
 }
 
 /* 장바구니 담기 알림 */
@@ -394,10 +115,4 @@
   color: #fff;
   font-size: 14px;
   z-index: 100;
-}
-
-.shop-discount {
-  margin-right: 6px;
-  font-weight: 800;
-  color: #d93025;
 }

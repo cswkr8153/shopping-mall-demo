@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { isLoggedIn, useCart } from '../context/CartContext'
 import './MainPage.css'
 import './CartPage.css'
@@ -116,6 +117,7 @@ function CartPage() {
           )}
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

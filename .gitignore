@@ -22,3 +22,6 @@ Thumbs.db
 /*.PNG
 /*.jpg
 /*.jpeg
+
+# 상품 사진 원본 폴더 (용량이 크고 저작권이 있을 수 있어 저장소에 올리지 않음)
+/product-photos/

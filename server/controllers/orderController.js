@@ -6,6 +6,7 @@ const Product = require('../models/Product');
 const User = require('../models/User');
 const UserCoupon = require('../models/UserCoupon');
 const portone = require('../utils/portone');
+const { confirmWithPayment, reconcileOrder, reconcileRecentPending } = require('../services/orderPayment');
 
 const { STATUSES, PAID_ORDERS } = Order; // PAID_ORDERS: 결제가 이루어진 주문만 (결제 대기, 결제 전 취소 제외)
 const { MAX_QUANTITY } = Cart;
@@ -83,6 +84,10 @@ const reserveCoupon = async (userId, userCouponId, orderId, shippingFee) => {
 
   // 결제 창을 닫는 등으로 결제 대기 주문에 예약만 남아 있으면 그 주문을 취소하고 예약을 넘겨받음
   if (userCoupon.order) {
+    // 단, 그 주문이 사실은 결제가 끝난 주문이면(확정이 늦어진 경우) 취소하지 않고 확정하고, 쿠폰은 사용한 것으로 처리
+    const stale = await Order.findById(userCoupon.order);
+    if (stale && (await reconcileOrder(stale))) return { error: '이미 사용한 쿠폰입니다.' };
+
     await Order.updateOne({ _id: userCoupon.order, status: 'pending' }, { $set: { status: 'cancelled' } });
     await UserCoupon.updateOne({ _id: userCoupon._id, usedAt: null }, { $set: { order: null } });
   }
@@ -186,34 +191,11 @@ exports.completePayment = async (req, res) => {
       return fail(res, 400, '이미 처리된 주문입니다.');
     }
 
-    const payment = await portone.getPayment(String(impUid));
-    if (!payment) return fail(res, 400, '결제 내역을 확인할 수 없습니다.');
-    if (payment.merchant_uid !== order.orderNumber) return fail(res, 400, '주문 정보가 결제 내역과 일치하지 않습니다.');
-    if (payment.status !== 'paid') return fail(res, 400, payment.fail_reason || '결제가 완료되지 않았습니다.');
+    // 결제 검증과 주문 확정은 services/orderPayment.js (자동 복구와 같은 로직)
+    const result = await confirmWithPayment(order, impUid);
+    if (result.error) return fail(res, 400, result.error);
 
-    if (payment.amount !== order.totalPrice) {
-      // 금액이 다르면 위변조로 보고 결제를 취소
-      await portone.cancelPayment(payment.imp_uid, '결제 금액 불일치').catch((e) => console.error('[payment] 자동 취소 실패', e.message));
-      return fail(res, 400, '결제 금액이 주문 금액과 일치하지 않아 결제가 취소되었습니다.');
-    }
-
-    order.status = 'received';
-    order.payment = {
-      impUid: payment.imp_uid,
-      method: payment.pay_method,
-      pgProvider: payment.pg_provider,
-      receiptUrl: payment.receipt_url,
-      paidAt: payment.paid_at ? new Date(payment.paid_at * 1000) : new Date(),
-    };
-    await order.save();
-
-    // 결제가 확인되었으니 쿠폰을 사용 처리
-    if (order.coupon?.userCoupon) {
-      await UserCoupon.updateOne({ _id: order.coupon.userCoupon, order: order._id }, { $set: { usedAt: new Date() } });
-    }
-    if (order.fromCart) await Cart.updateOne({ user: req.auth.id }, { $set: { items: [] } });
-
-    res.json(order);
+    res.json(result.order);
   } catch (err) {
     handleError(err, res);
   }
@@ -222,6 +204,9 @@ exports.completePayment = async (req, res) => {
 // Read: 내 주문 목록
 exports.getMyOrders = async (req, res) => {
   try {
+    // 결제는 끝났는데 확정이 안 된 최근 주문(결제 직후 창을 닫은 경우 등)을 먼저 복구
+    await reconcileRecentPending(req.auth.id);
+
     const orders = await Order.find({ user: req.auth.id, ...PAID_ORDERS }).sort({ createdAt: -1 });
     res.json(orders);
   } catch (err) {
@@ -251,6 +236,12 @@ exports.cancelOrder = async (req, res) => {
   try {
     const order = await Order.findOne({ _id: req.params.id, user: req.auth.id });
     if (!order) return fail(res, 404, '주문을 찾을 수 없습니다.');
+
+    // 결제 대기 주문을 취소하려는데 사실은 결제가 끝난 주문이면, 몰래 취소하지 않고 확정한 뒤 알려줌
+    if (order.status === 'pending' && (await reconcileOrder(order))) {
+      return fail(res, 409, '이미 결제가 완료된 주문입니다. 내 주문에서 확인해 주세요.');
+    }
+
     if (!['pending', 'received', 'confirmed'].includes(order.status)) {
       return fail(res, 400, order.status === 'cancelled' ? '이미 취소된 주문입니다.' : '상품 준비가 시작된 주문은 취소할 수 없습니다.');
     }
@@ -306,6 +297,9 @@ exports.updateStatus = async (req, res) => {
 
     const order = await Order.findById(req.params.id);
     if (!order) return fail(res, 404, '주문을 찾을 수 없습니다.');
+
+    // 결제 대기로 남아 있어도 실제로는 결제가 끝난 주문이면 먼저 확정 (그래야 환불/배송 처리가 맞게 됨)
+    if (order.status === 'pending') await reconcileOrder(order);
 
     // 결제 전 주문은 배송 단계로 넘길 수 없고, 취소만 가능
     if (order.status === 'pending' && !['pending', 'cancelled'].includes(status)) {
